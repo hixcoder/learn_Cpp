@@ -1,28 +1,47 @@
 #include "header.h"
 
-// by default every thing inside the class is private
-class Player
+class Logs
 {
-    public:
-        int x;
-        int y;
-        int speed;
-void    Move(int xa, int ya)
-{
-    x += xa * speed;
-    y += ya * speed;
-}
+public:
+    const int LogLevelError = 0;
+    const int LogLevelWarning = 1;
+    const int LogLevelInfo = 2;
+
+private:
+    int m_LogLevel = LogLevelInfo;
+
+public:
+    void    SetLevel(int level)
+    {
+        m_LogLevel = level;
+    }
+    void    Warn(const char *message)
+    {
+        if (m_LogLevel == LogLevelWarning)
+            std::cout << "[WARNING]: " << message << std::endl;
+    }
+    void    Error(const char *message)
+    {
+        if (m_LogLevel == LogLevelError)
+            std::cout << "[ERROR]: " << message << std::endl;
+    }
+    void    Info(const char *message)
+    {
+        if (m_LogLevel == LogLevelInfo)
+            std::cout << "[INFO]: " << message << std::endl;
+    }
 };
+
+
 
 
 int main()
 {
-    int i;
-    Player p1;
+    Logs log;
 
-    p1.x = 0;
-    p1.x = 20;
-    p1.speed = 10;
-    p1.Move(10, 50);
-    printf("P1.x = %d\n", p1.x);
+    log.SetLevel(1);
+    log.Error("hello error");
+    log.Warn("hello warning");
+    log.Info("hello info");
+
 }
