@@ -3,5 +3,6 @@
 
 int main()
 {
+    std::cout << "hello" << std::endl;
     MutiplyAndLog(9, 5);
 }
