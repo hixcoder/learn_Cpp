@@ -1,5 +1,4 @@
-#include "header.h"
-
+#include "../header.h"
 class Logs
 {
 public:
@@ -32,9 +31,10 @@ public:
     }
 };
 
-
-
-
+static void sayHello()
+{
+    printf("hello \n");
+}
 int main()
 {
     Logs log;
@@ -43,5 +43,6 @@ int main()
     log.Error("hello error");
     log.Warn("hello warning");
     log.Info("hello info");
+    sayHello();
 
 }
