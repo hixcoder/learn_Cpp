@@ -15,6 +15,16 @@ void Log(const char *str)
     std::cout << str << std::endl;
 }
 
+void    Increment1(int *value)
+{
+    (*value)++;
+}
+
+void    Increment2(int& value)
+{
+    value++;
+}
+
 // int main()
 // {
 //     int a = 8;

@@ -8,3 +8,5 @@
 
 void MutiplyAndLog(int c, int b);
 void Log(const char *str);
+void    Increment1(int *value);
+void    Increment2(int& value);
