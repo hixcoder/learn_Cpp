@@ -6,5 +6,5 @@
 
 # include <iostream>
 
-void MutiplyAndLog(int a, int b);
+void MutiplyAndLog(int c, int b);
 void Log(const char *str);
