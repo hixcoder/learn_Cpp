@@ -10,6 +10,11 @@ void MutiplyAndLog(int a, int b)
     std::cout << a << " * " << b << " = " << Multiply(a, b)<< std::endl;
 }
 
+void Log(const char *str)
+{
+    std::cout << str << std::endl;
+}
+
 // int main()
 // {
 //     int a = 8;
