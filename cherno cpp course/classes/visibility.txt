@@ -1,0 +1,10 @@
+code: variabes or functions inside your class
+----------------------
+-> public: use it when you want your code to be accessed from any place
+-> protected: use it when you want your code to be accessed from only the sub class of your base class
+-> private: use it when you want your code to be accessed only inside the class.
+
+
+====> why you use visibility
+- use it to make your code easier to read and use.
+- help others to know which code they need to use and when to use it.

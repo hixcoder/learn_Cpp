@@ -33,8 +33,8 @@ public:
 
 int main()
 {
-    Instrument *i1 = new Piano();
-    Instrument *i2 = new Gitar();
-    i1->MakeSound();
-    i2->MakeSound();
+    Piano i1;
+    Gitar i2;
+    i1.MakeSound();
+    i2.MakeSound();
 }
