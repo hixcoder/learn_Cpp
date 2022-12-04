@@ -5,9 +5,15 @@
 // @ encapsulation:
 // it means that all proprties(variables) inside a class should be private, and the only
 // way to access them is by using methods. [all variables should be private]
+
+
+// @ Inheritance:
+// the YoutubeChannel class called the base class
+// and the CookingYoutubeChannel class will be called a sub class because it inherite from the base class.
+
 class YoutubeChannel
 {
-private:
+protected:
     string Name;
     string OwnerName;
     int SubscribersCount;
@@ -48,14 +54,22 @@ public:
     }
 };
 
+class CookingYoutubeChannel: public YoutubeChannel
+{
+public:
+    CookingYoutubeChannel(string name, string ownerName): YoutubeChannel(name, ownerName){}
+    void Practice()
+    {
+        cout << "Practice cooking with " << OwnerName << endl;
+    }
+};
+
 int main()
 {
-    YoutubeChannel ytChannel1("Senko Art", "hix man");
-    YoutubeChannel ytChannel2("Senko brother", "makos");
+    CookingYoutubeChannel ytChannel1("Senko Art", "hix man");
     ytChannel1.Subscribe();
     ytChannel1.Subscribe();
     ytChannel1.Subscribe();
     ytChannel1.GetInfo();
-    ytChannel2.Unsubscribe();
-    ytChannel2.GetInfo();
+    ytChannel1.Practice();
 }
